@@ -9,11 +9,24 @@ const ChartData = (props) => {
 
 
   let charts = props.charts.map((chart, index) => {
-    return <li key={index}>{chart.title.label}</li>
+    return(
+      <React.Fragment>
+        <li key={index}>
+          <p>{chart.title.label}</p>
+          <div className="image">
+          <img src={chart["im:image"][0]["label"]} key="{index + 20}" alt="" className="album_artwork"/>
+          </div>
+        </li>
+      </React.Fragment>
+    )
   })
+
+  // let covers = props.charts.map((chart, index) =>{
+  //   console.log(chart["im:image"][0]["label"]);
+  //   return
+  // })
   return (
     <React.Fragment>
-      <p>This is the Charts List</p>
       <ol>
         {charts}
       </ol>
