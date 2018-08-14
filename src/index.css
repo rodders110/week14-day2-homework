@@ -1,20 +1,22 @@
+html {
+  overflow-y: scroll;
+}
+
 body {
-  margin: 0;
-  padding: 0;
   font-family: sans-serif;
   background: rgb(212,212,223);
   background: radial-gradient(circle, rgba(212,212,223,1) 4%, rgba(144,138,241,0.227328431372549) 77%);
-  width: 100%;
-  height: 100%;
+  width: 100pw;
+  height: 100ph;
 
 }
 
 div.ChartContainer{
   background-color: pink;
-  position: fixed;
+  position:absolute;
   left: 30%;
   align-content: center;
-  overflow-y: auto;
+  overflow: visible;
 }
 
 div.ChartContainer h1{
@@ -24,6 +26,7 @@ div.ChartContainer h1{
 }
 
 div.ChartContainer ol li {
+  list-style-type: armenian;
   display: flex;
   width: 590px;
   flex-direction: row;
@@ -43,4 +46,5 @@ div.ChartContainer ol li div.image{
 
 div.ChartContainer ol li div.image img{
   float: right;
+  margin-right: 10px;
 }

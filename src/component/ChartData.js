@@ -10,14 +10,10 @@ const ChartData = (props) => {
 
   let charts = props.charts.map((chart, index) => {
     return(
-      <React.Fragment>
         <li key={index}>
-          <p>{chart.title.label}</p>
-          <div className="image">
+          <p>{index + 1}. {chart.title.label}</p>
           <img src={chart["im:image"][0]["label"]} key="{index + 20}" alt="" className="album_artwork"/>
-          </div>
         </li>
-      </React.Fragment>
     )
   })
 
@@ -26,11 +22,9 @@ const ChartData = (props) => {
   //   return
   // })
   return (
-    <React.Fragment>
       <ol>
         {charts}
       </ol>
-      </React.Fragment>
   )
 }
 
